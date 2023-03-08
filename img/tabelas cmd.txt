@@ -1,0 +1,43 @@
+create table cadastro (
+id_cad int auto_increment not null,
+nome_paciente varchar(255) not null,
+data_nasc date,
+cpf varchar(14),
+estado_civil char(1),
+sexo char(1),
+pai varchar(255),
+mae varchar(255),
+email varchar(255),
+telefone_cel varchar(20),
+primary key(id_cad)
+);
+
+create table endereco(
+id_end int not null auto_increment,
+cep int,
+rua varchar(255),
+bairro varchar(255),
+estado varchar(255),
+cidade varchar(255),
+complemento varchar(255),
+primary key(id_end)
+);
+
+create table historico_familiar(
+id_his int auto_increment not null,
+historico varchar(6),
+bebida_alcoolica varchar(255),
+exercicio_fisico varchar(255),
+tipo_sanguineo varchar(255),
+outros varchar(255),
+primary key(id_his)
+);
+
+create table login(
+id_log int not null auto_increment,
+usuario varchar(255) not null,
+senha varchar(255) not null,
+primary key(id_log)
+);
+
+insert into login (usuario, senha) values ('teste', '1230');
